@@ -2,8 +2,18 @@
 
 import math
 
+# 1. if len(ingr) < len(recipe), => 0
+# 2. for i in range(0, len(ingr)), set maxBatch to rec[i] // ing[i] if the latter is less than maxBatch
+# 3. return maxBatch
+
 def recipe_batches(recipe, ingredients):
-  pass 
+  if len(ingredients) < len(recipe):
+    return 0
+  maxBatch = float("inf")
+  for i in recipe:
+    if ingredients[i] // recipe[i] < maxBatch:
+      maxBatch = ingredients[i] // recipe[i]
+  return maxBatch 
 
 
 if __name__ == '__main__':

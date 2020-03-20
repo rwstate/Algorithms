@@ -66,7 +66,8 @@ making_change.py [amount]`
    the higher amounts between our coin and the amount (i.e., `for higher_amount
    in range(coin, amount + 1)`). If we take the difference between the higher
    amount and the value of our coin, we can start building up the values in our
-   cache. 
+   cache.
+
 
    To go into a little more detail, let's walk through a small example. If we
    imagine our coin is a penny, in the first loop iteration, `higher_amount` is
@@ -74,6 +75,8 @@ making_change.py [amount]`
    take the difference between `higher_amount` and our coin value, we get 0. We
    already have a value for 0 in our cache; it's 1. So now we've just figured
    out 1 way to 1 cent from a penny. Add that answer to our cache. 
+   1 - 0 = 0
+   cache[1] = cache[0] 
 
    Next up, on the next iteration, `higher_amount` will now be 2. The difference
    between `higher_amount` and our coin value now is 1. Well we just figured out
