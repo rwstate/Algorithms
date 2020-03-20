@@ -12,10 +12,7 @@ def helper(movesListList):
 
 def rock_paper_scissors(n):
   moveList = [["rock", "paper", "scissors"]] * n
-  print(moveList)
   return list(helper(moveList))
-  
-print(rock_paper_scissors(8))
 # if __name__ == "__main__":
 #   if len(sys.argv) > 1:
 #     num_plays = int(sys.argv[1])

@@ -16,7 +16,6 @@ import sys
 # print(cache)
 
 def helper(coins, cache):
-  print(cache, coins)
   if len(coins) == 0:
     return cache[-1]
   for i in range(coins[0], len(cache)):
@@ -28,8 +27,6 @@ def making_change(amount, denominations):
   initCache = [0] * (amount + 1)
   initCache[0] = 1
   return helper(denominations, initCache)
-
-print(making_change(200, [1, 5, 10, 25, 50]))
 
 if __name__ == "__main__":
   # Test our your implementation from the command line
